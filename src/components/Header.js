@@ -37,22 +37,22 @@ import { MdOutlineMessage } from "react-icons/md";
 
 const Header = () => {
   return (
-    <section className='w-screen h-full '>
+    <section className='w-screen h-full overflow-hidden '>
         <div className='flex justify-between items-center  w-[85%] mx-auto text-sm'>
             <div className='flex items-center  gap-4 flex-[2/3]'>
-                <div className='flex items-center gap-2 hover:text-orange-600'>
+                <div className='flex items-center gap-2 hover:text-orange-600 cursor-pointer'>
                     <GrHome className='font-bold'/> 
                     <p>Home</p>
                 </div>
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
                     <MdOutlineStars/>
                     <p>About Us</p>
                 </div>
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
                     <CiMail/>
                     <p>Contact Us</p>
                 </div>
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
                     <HiOutlineQuestionMarkCircle/>
                     <p>FAQ</p>
                     <FaCaretDown/>
@@ -61,12 +61,12 @@ const Header = () => {
 
 
             <div className='flex items-center gap-4 '>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
                 <GiUsaFlag/>
                 <p>English</p>
                 <FaCaretDown/>  
             </div>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
                 <span>$</span>
                 <p>US Dollar</p>
                 <FaCaretDown/>
@@ -77,13 +77,13 @@ const Header = () => {
 
 
             <div className='flex items-center gap-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
             <GiHamburgerMenu/>
                 <p>More menu</p>
                 <FaCaretDown/>
             </div>
                 
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer' >
                 
                 <TbTruckDelivery/>
                 <p>Delivery</p>
@@ -110,7 +110,7 @@ const Header = () => {
                     ALL
                     <FaCaretDown/>
                 </button>
-                     <input type='text' placeholder='Search for products, brands and more' className='border-none p-2 w-full h-full'/>
+                     <input type='text' placeholder='Search for products, brands and more' className='border-none p-2 w-full h-full outline-none'/>
                      <button className='bg-blue-800 px-5 flex  text-3xl items-center h-full font-bold rounded-r-md'>
                     <FaSearch/>
                 </button>

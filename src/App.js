@@ -160,8 +160,6 @@ function App() {
           <TfiYoutube/>
           <FaSkype/>
           <FaSquareGooglePlus/>
-
-
       </div>
 
     </section>

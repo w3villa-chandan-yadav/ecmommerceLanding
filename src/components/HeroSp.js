@@ -7,7 +7,7 @@ import { RiBox3Line } from "react-icons/ri";
 
 const HeroSp = () => {
   return (
-    <section className='w-screen py-5 bg-blue-950'>
+    <section className='w-screen py-5 bg-blue-950 overflow-hidden'>
         <div className='w-[80%] mx-auto flex justify-between items-center'>
             <div className='flex items-center gap-2'>
                 <div className='w-[50px] h-[50px]  rounded-full flex justify-center items-center border-2  border-blue-500 '>

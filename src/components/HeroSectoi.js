@@ -5,15 +5,15 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const HeroSectoi = () => {
   return (
 
-    <section className='w-screen h-full py-5'>
+    <section className='w-screen h-full py-5 overflow-hidden'>
         <div className='w-[85%] mx-auto flex justify-center items-center gap-5 h-[400px] '>
             <div className='flex-1 rounded-md overflow-hidden relative h-full'>
-               <img src='https://2869844.fs1.hubspotusercontent-na1.net/hub/2869844/hubfs/5f7af66bd92180eadfa6de6e_2-Power_Ups_Main-p-1600.jpg?width=300&name=5f7af66bd92180eadfa6de6e_2-Power_Ups_Main-p-1600.jpg' alt='main_ingae' className='w-full h-full object-cover object-center'/>
+               <img src='https://budli.in/blog/wp-content/uploads/2021/07/6-What-You-Should-Do-Before-You-Sell-Your-Used-Laptop.jpg' alt='main_ingae' className='w-full h-full object-cover object-center'/>
                <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-7'>
                 <button className='bg-blue-500 text-white px-3 py-1 rounded-md text-xs'> 
                     Mobile
                 </button>
-                <h3 className='text-4xl font-extrabold '>
+                <h3 className='text-4xl  font-extrabold font-sans '>
                     Best Mobile options <br/>at any resolution
                 </h3>
                 <button className='flex items-center gap-1 border-[1px] border-black rounded-md px-3 py-1' >
