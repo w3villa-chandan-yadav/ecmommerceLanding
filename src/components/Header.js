@@ -39,35 +39,35 @@ const Header = () => {
   return (
     <section className='w-screen h-full overflow-hidden '>
         <div className='flex justify-between items-center  w-[85%] mx-auto text-sm'>
-            <div className='flex items-center  gap-4 flex-[2/3]'>
-                <div className='flex items-center gap-2 hover:text-orange-600 cursor-pointer'>
+            <div className='hidden items-center  gap-1 flex-[2/3] lg:flex md:flex md:gap-2 lg:gap-4 '>
+                <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
                     <GrHome className='font-bold'/> 
                     <p>Home</p>
                 </div>
-                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
+                <div className='flex items-center gap-1 text-xs lg:text-sm text-wrap md:gap-1 hover:text-orange-600 cursor-pointer'>
                     <MdOutlineStars/>
-                    <p>About Us</p>
+                    <p className='text-nowrap'>About Us</p>
                 </div>
-                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
+                <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
                     <CiMail/>
-                    <p>Contact Us</p>
+                    <p className='text-nowrap'>Contact Us</p>
                 </div>
-                <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
+                <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
                     <HiOutlineQuestionMarkCircle/>
-                    <p>FAQ</p>
+                    <p className='text-nowrap'>FAQ</p>
                     <FaCaretDown/>
                 </div>
             </div>
 
 
-            <div className='flex items-center gap-4 '>
-            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
-                <GiUsaFlag/>
+            <div className='flex items-center gap-1 md:gap-2 lg:gap-4 '>
+            <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
+            <GiUsaFlag/>
                 <p>English</p>
                 <FaCaretDown/>  
             </div>
-            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
-                <span>$</span>
+            <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
+            <span>$</span>
                 <p>US Dollar</p>
                 <FaCaretDown/>
             </div>
@@ -76,14 +76,14 @@ const Header = () => {
 
 
 
-            <div className='flex items-center gap-4'>
-            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer'>
+            <div className='flex items-center gap-1 md:gap-2 lg:gap-4'>
+            <div className='flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
             <GiHamburgerMenu/>
                 <p>More menu</p>
                 <FaCaretDown/>
             </div>
                 
-            <div className='flex items-center gap-1 hover:text-orange-600 cursor-pointer' >
+            <div className= 'hidden  md:flex items-center gap-1 text-xs lg:text-sm md:gap-1 hover:text-orange-600 cursor-pointer'>
                 
                 <TbTruckDelivery/>
                 <p>Delivery</p>
@@ -101,11 +101,11 @@ const Header = () => {
 
         <div className='flex justify-between items-center  w-screen bg-gray-200 mx-auto text-sm py-4 '>
         <div className='flex justify-between items-center  w-[85%] mx-auto  gap-10'>
-               <div className="w-[15%] h-[40px]">
+               <div className="w-[20%] md:w-[13%] lg:w-[15%]  h-[27px] md:h-[34px] lg:h-[40px]">
                   <img src={image} alt='main_image' className='w-full h-full'/>
                </div>
 
-               <div className='flex items-center justify-start h-[40px] flex-1'>
+               <div className='hidden lg:flex items-center justify-start h-[40px] flex-1'>
                <button className='bg-blue-800 px-3 flex items-center h-full font-bold rounded-l-md'>
                     ALL
                     <FaCaretDown/>
@@ -116,13 +116,13 @@ const Header = () => {
                 </button>
                </div>
 
-               <div className='flex items-center flex-[0.4] gap-3'>
+               <div className='hidden md:flex items-center flex-[0.4] gap-3'>
                 <div className='flex items-center flex-col justify-between '>
                     <HiUserCircle className='text-xl font-semibold'/>
                      <p className='text-xs font-semibold'> Login</p>
                 </div>
 
-                <div className='flex items-center flex-col justify-between '>
+                <div className='flex items-center flex-col justify-center '>
                     <PiNotePencilFill className='text-xl font-semibold'/>
                     <p  className='text-xs font-semibold'>Register</p>
                 </div>
@@ -142,9 +142,16 @@ const Header = () => {
 
                </div>
 
+               
+
                <div className='flex items-center justify-end h-[40px] '>
-                <p>0 item(s)-$0.00</p>
-                <PiShoppingCartSimpleFill className='text-blue-800 text-3xl'/>
+               <div className=' lg:hidden flex items-center gap-3 mr-2 '>
+                <GiHamburgerMenu className='text-3xl md:hidden'/>
+                <FaSearch className='text-3xl'/>
+
+               </div>
+                <p className='text-[10px] md:text-sm'>0 item(s)-$0.00</p>
+                <PiShoppingCartSimpleFill className='text-blue-800 text-xl md:text-3xl'/>
 
                </div>
                
@@ -156,8 +163,8 @@ const Header = () => {
           <div className='w-screen bg-blue-800'>
             <div className="w-[85%] mx-auto flex justify-between items-center ">
                 <div className='flex items-center gap-4 h-[40px]'>
-                    <div className='h-full bg-yellow-500 text-black relative flex items-center px-4 text-sm '>
-                      <IoReorderFourOutline className='text-3xl font-bolder'/>
+                    <div className='h-full bg-yellow-500 text-black relative flex items-center px-2 lg:px-4 text-sm text-nowrap  '>
+                      <IoReorderFourOutline className='hidden md:visible text-2xl lg:text-3xl font-bolder'/>
                       ALL DEPARTMENTS
 
                       <div className='absolute -top-2 right-0 bg-red-500 text-white px-1 rounded-sm text-[10px]'>
@@ -165,7 +172,7 @@ const Header = () => {
                       </div>
                     </div>
 
-                    <div className='flex items-center gap-3 text-white text-sm relative'> 
+                    <div className=' hidden  lg:flex items-center gap-3 text-white text-sm relative'> 
                      <h3>MULTIVITAM</h3>
                      <h3>MEGA MENU</h3>
                      <h3>FULLWIDTH</h3>
@@ -180,12 +187,17 @@ const Header = () => {
                     </div>
 
                 </div>
-                <div className='flex items-center gap-4 h-[40px]'>
-                    <div className='flex items-center gap-2 text-white '>
+                <div className='flex items-center gap-1 md:gap-2 lg:gap-4 h-[40px]'>
+                    <div className=' hidden md:flex items-center gap-0 md:gap-1 lg:gap-2 text-xs text-white '>
                          <TbPhoneRinging/>
                          +91-123-456-7890
                     </div>
-                    <div className='h-full flex items-center bg-yellow-500 text-black px-4 gap-3'>
+
+                    <div className=' pt-2 h-full md:hidden items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3'>
+                  <GiHamburgerMenu className='text-2xl'/>
+                 </div>
+
+                    <div className='hidden  h-full md:flex items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3'>
                         <MdOutlineMessage className='text-2xl '/>
                           <p className='text-xs'>BLOG</p>
                     </div>

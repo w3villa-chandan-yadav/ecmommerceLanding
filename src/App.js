@@ -57,12 +57,13 @@ function App() {
     <ShopByBrand/>
     <Gallery/>
     <Blogs/>
-    <section className='w-screen h-full pt-4 pb-5 bg-gray-300'>
+    
+    <section className='w-screen h-full pt-4 pb-5 bg-gray-300 overflow-hidden'>
       <div className='w-[85%] mx-auto'>
         <h3 className='text-2xl font-bold text-center'>What people say about us </h3>
         <div className='h-[2px] w-[10%] mx-auto bg-orange-500 rounded-lg my-4'/>
-        <div className='w-full h-[200px] flex justify-between items-center gap-10 my-7'>
-          <div className=''>
+        <div className='w-full h-full md:h-[200px] grid grid-cols-1 md:grid-cols-2 lg:flex justify-between items-center gap-10 my-7'>
+          <div className='hidden lg:block'>
           <h3 className='text-center w-fit mx-auto'><FaQuoteLeft className='text-4xl text-center text-orange-600'/></h3>
           <p> I've purchased hundresn and hundreds of files over the past 7 years.But there is nothing close 
             to this support and profeessionalism,NOt only is theme , simple , useful and modern,but again the support is remarkable. Very happy I got this theme! Thanks you!</p>
@@ -73,7 +74,7 @@ function App() {
 
 
 
-      <div>
+      <div className='hidden md:block '>
           <h3 className='text-center w-fit mx-auto'><FaQuoteLeft className='text-4xl text-center text-orange-600'/></h3>
           <p> I've purchased hundresn and hundreds of files over the past 7 years.But there is nothing close 
             to this support and profeessionalism,NOt only is theme , simple , useful and modern,but again the support is remarkable. Very happy I got this theme! Thanks you!</p>
@@ -98,58 +99,58 @@ function App() {
 
     </section>
 
-    <section className='w-screen h-full pt-4 pb-5 bg-gray-600 '>
-      <div className='w-[85%] mx-auto my-5'><h3 className='text-white font-bold'>MOST VIEWED</h3>
-      <div className='w-[6%] h-[2px] bg-orange-600 rounded-md'/>
-      </div>
-      <div className='w-[85%] mx-auto flex justify-between items-center gap-4'>
-        <div className='bg-white px-3 py-1  flex justify-center items-center gap-2'>
-          <div className='w-[100px] h-[60px]'>
-        <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
-          </div>
-          <div>
-            <h4 className='text-xs'>Oversize sunglasse For...</h4>
-            <p>$39.00</p>
-          </div>
-
+      <section className='w-screen h-full pt-4 pb-5 bg-gray-600 overflow-hidden '>
+        <div className='w-[85%] mx-auto my-5'><h3 className='text-white text-center md:text-left font-bold'>MOST VIEWED</h3>
+        <div className='w-[6%] h-[2px] bg-orange-600 rounded-md mx-auto md:mx-0'/>
         </div>
-        <div className='bg-white px-3 py-1 flex justify-center items-center'>
-          <div className='w-[100px] h-[60px]'>
-        <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
+        <div className='w-[85%] mx-auto  grid grid-cols-2 md:flex justify-between items-center gap-4 overflow-auto'>
+          <div className='bg-white px-3 py-1 w-full flex justify-center items-center gap-2 rounded-lg'>
+            <div className='w-full h-[60px]'>
+          <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
+            </div>
+            <div>
+              <h4 className='text-xs'>Oversize sunglasse For...</h4>
+              <p>$39.00</p>
+            </div>
+
           </div>
-          <div>
-            <h4  className='text-xs'>Oversize sunglasse For...</h4>
-            <p>$39.00</p>
+          <div className='bg-white w-full px-3 py-1 flex justify-center items-center gap-2 rounded-lg'>
+            <div className='w-full  h-[60px]'>
+          <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
+            </div>
+            <div>
+              <h4  className='text-xs'>Oversize sunglasse For...</h4>
+              <p>$39.00</p>
+            </div>
+
           </div>
 
+          <div className='bg-white w-full px-3 py-1 flex justify-center items-center gap-2 rounded-lg' >
+            <div className='w-full h-[60px]'>
+          <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
+            </div>
+            <div>
+              <h4  className='text-xs'>Oversize sunglasse For...</h4>
+              <p>$39.00</p>
+            </div>
+
+          </div>
+
+          <div className='bg-white w-full px-3 py-1  justify-center items-center gap-2 rounded-lg flex md:hidden lg:flex'>
+            <div className='w-full h-[60px]'>
+          <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
+            </div>
+            <div>
+              <h4  className='text-xs'>Oversize sunglasse For...</h4>
+              <p>$39.00</p>
+            </div>
+
+          </div>
+          
         </div>
 
-        <div className='bg-white px-3 py-1 flex justify-center items-center'>
-          <div className='w-[100px] h-[60px]'>
-        <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
-          </div>
-          <div>
-            <h4  className='text-xs'>Oversize sunglasse For...</h4>
-            <p>$39.00</p>
-          </div>
 
-        </div>
-
-        <div className='bg-white px-3 py-1 flex justify-center items-center'>
-          <div className='w-[100px] h-[60px]'>
-        <img src='https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2024/09/spectacles-24-2.jpg' alt='image-spec' className='w-full h-full object-cover object-center'/>
-          </div>
-          <div>
-            <h4  className='text-xs'>Oversize sunglasse For...</h4>
-            <p>$39.00</p>
-          </div>
-
-        </div>
-        
-      </div>
-
-
-    </section>
+      </section>
 
     <section className='w-screen h-full bg-gray-300'>
       <div className='w-[60%] mx-auto flex justify-center items-center gap-4 py-5 text-4xl bg-gray-300 text-blue-500'>

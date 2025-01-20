@@ -11,7 +11,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Blogs = () => {
   return (
-<section className='w-screen h-full py-8'>
+<section className='w-screen h-full py-8 overflow-hidden'>
     <div className='w-[85%] mx-auto '>
         <h3 className='text-center text-2xl font-extrabold'>From our Blog</h3>
         <div className='h-[2px] rounded-lg w-[10%] mx-auto bg-orange-500'/>
@@ -27,7 +27,7 @@ const Blogs = () => {
             </button>
         </div>
 
-        <div className='w-full h-full flex justify-between gap-10'>
+        <div className='w-full h-full grid grid-cols-1 md:grid-cols-2 lg:flex justify-between gap-10'>
             <div className='w-full h-[490px] bg-gray-200'>
                 <div className='w-full h-[40%] bg-gray-500'>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYldPpXCNwLLFnGcRedBBrCVwe_C9NcRbSUQ&s' className='w-full h-[90%] object-cover' alt='blog'/>
@@ -50,7 +50,7 @@ const Blogs = () => {
             </div>
 
 
-            <div className='w-full h-[490px] bg-gray-200'>
+            <div className='hidden md:block w-full h-[490px] bg-gray-200'>
                 <div className='w-full h-[40%] bg-gray-500'>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYldPpXCNwLLFnGcRedBBrCVwe_C9NcRbSUQ&s' className='w-full h-[90%] object-cover' alt='blog'/>
                     <div className='flex justify-center items-center gap-5 text-white '>
@@ -78,7 +78,7 @@ const Blogs = () => {
 
 
 
-            <div className='w-full h-[490px] bg-gray-200'>
+            <div className='hidden lg:block w-full h-[490px] bg-gray-200'>
                 <div className='w-full h-[40%] bg-gray-500'>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYldPpXCNwLLFnGcRedBBrCVwe_C9NcRbSUQ&s' className='w-full h-[90%] object-cover' alt='blog'/>
                     <div className='flex justify-center items-center gap-5 text-white'>
