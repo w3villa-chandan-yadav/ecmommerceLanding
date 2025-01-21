@@ -99,42 +99,42 @@ const Header = () => {
 
 
 
-        <div className='flex justify-between items-center  w-screen bg-gray-200 mx-auto text-sm py-4 '>
+        <div className='flex justify-between items-center  w-screen bg-gray-200 mx-auto text-sm py-5 '>
         <div className='flex justify-between items-center  w-[85%] mx-auto  gap-10'>
-               <div className="w-[20%] md:w-[13%] lg:w-[15%]  h-[27px] md:h-[34px] lg:h-[40px]">
+               <div className="w-[20%] md:w-[13%] lg:w-[15%] flex items-center  h-[27px] md:h-[34px] lg:h-[40px]">
                   <img src={image} alt='main_image' className='w-full h-full'/>
                </div>
 
                <div className='hidden lg:flex items-center justify-start h-[40px] flex-1'>
-               <button className='bg-blue-800 px-3 flex items-center h-full font-bold rounded-l-md'>
+               <button className='bg-blue-800 px-3 flex items-center h-full font-bold rounded-l-md  text-white'>
                     ALL
-                    <FaCaretDown/>
+                    <FaCaretDown className='text-white'/>
                 </button>
                      <input type='text' placeholder='Search for products, brands and more' className='border-none p-2 w-full h-full outline-none'/>
-                     <button className='bg-blue-800 px-5 flex  text-3xl items-center h-full font-bold rounded-r-md'>
-                    <FaSearch/>
+                     <button className='bg-blue-800 px-5 flex  text-2xl items-center h-full font-bold rounded-r-md'>
+                    <FaSearch className=' text-white'/>
                 </button>
                </div>
 
                <div className='hidden md:flex items-center flex-[0.4] gap-3'>
-                <div className='flex items-center flex-col justify-between '>
-                    <HiUserCircle className='text-xl font-semibold'/>
+                <div className='flex items-center flex-col justify-between cursor-pointer '>
+                    <HiUserCircle className='text-xl font-semibold text-gray-800'/>
                      <p className='text-xs font-semibold'> Login</p>
                 </div>
 
-                <div className='flex items-center flex-col justify-center '>
-                    <PiNotePencilFill className='text-xl font-semibold'/>
-                    <p  className='text-xs font-semibold'>Register</p>
+                <div className='flex items-center flex-col justify-center cursor-pointer '>
+                    <PiNotePencilFill className='text-xl font-semibold text-gray-800'/>
+                    <p  className='text-xs font-semibold text-gray-800'>Register</p>
                 </div>
 
-                <div className='flex items-center flex-col justify-between '>
-                    <FaRegHeart className='text-xl font-semibold'/>
-                    <p  className='text-xs font-semibold'>Wishlist</p>
+                <div className='flex items-center flex-col justify-between  cursor-pointer'>
+                    <FaRegHeart className='text-xl font-semibold text-gray-800'/>
+                    <p  className='text-xs font-semibold text-gray-800'>Wishlist</p>
                 </div>
 
-                <div className='flex items-center flex-col justify-between '>
-                    <PiShoppingCartSimpleFill className='text-xl font-semibold'/>
-                    <p  className='text-xs font-semibold'>Compare</p>
+                <div className='flex items-center flex-col justify-between cursor-pointer'>
+                    <PiShoppingCartSimpleFill className='text-xl font-semibold text-gray-800'/>
+                    <p  className='text-xs font-semibold text-gray-800' >Compare</p>
                 </div>
 
 
@@ -146,12 +146,12 @@ const Header = () => {
 
                <div className='flex items-center justify-end h-[40px] '>
                <div className=' lg:hidden flex items-center gap-3 mr-2 '>
-                <GiHamburgerMenu className='text-3xl md:hidden'/>
-                <FaSearch className='text-3xl'/>
+                <GiHamburgerMenu className='text-3xl md:hidden text-gray-800'/>
+                <FaSearch className='text-3xl text-gray-800'/>
 
                </div>
                 <p className='text-[10px] md:text-sm'>0 item(s)-$0.00</p>
-                <PiShoppingCartSimpleFill className='text-blue-800 text-xl md:text-3xl'/>
+                <PiShoppingCartSimpleFill className='rounded-sm ml-1 text-xl md:text-3xl bg-blue-600 text-white'/>
 
                </div>
                
@@ -160,24 +160,24 @@ const Header = () => {
             </div>  
           </div>
 
-          <div className='w-screen bg-blue-800'>
+          <div className='w-screen bg-blue-800 overflow-hidden'>
             <div className="w-[85%] mx-auto flex justify-between items-center ">
-                <div className='flex items-center gap-4 h-[40px]'>
-                    <div className='h-full bg-yellow-500 text-black relative flex items-center px-2 lg:px-4 text-sm text-nowrap  '>
+                <div className='flex items-center gap-2 h-[40px]'>
+                    <div className='h-full bg-yellow-500 text-black relative flex items-center px-2 lg:px-4 text-sm text-nowrap cursor-pointer  '>
                       <IoReorderFourOutline className='hidden md:visible text-2xl lg:text-3xl font-bolder'/>
                       ALL DEPARTMENTS
 
-                      <div className='absolute -top-2 right-0 bg-red-500 text-white px-1 rounded-sm text-[10px]'>
+                      <div className='absolute -top-2 right-0 bg-red-500 text-white px-1 rounded-sm text-[10px] z-10 cursor-pointer'>
                         SALE
                       </div>
                     </div>
 
                     <div className=' hidden  lg:flex items-center gap-3 text-white text-sm relative'> 
-                     <h3>MULTIVITAM</h3>
-                     <h3>MEGA MENU</h3>
-                     <h3>FULLWIDTH</h3>
+                     <h3 className='cursor-pointer'>MULTIVITAM</h3>
+                     <h3 className='cursor-pointer'>MEGA MENU</h3>
+                     <h3 className='cursor-pointer'>FULLWIDTH</h3>
 
-                     <div className='absolute -top-4  right-[50%] bg-yellow-300 text-black px-1 rounded-sm text-[10px]'>
+                     <div className='absolute -top-5  right-[50%] bg-yellow-300 text-black px-1 rounded-sm text-[10px] cursor-pointer'>
                         SALE
                       </div>
 
@@ -188,16 +188,16 @@ const Header = () => {
 
                 </div>
                 <div className='flex items-center gap-1 md:gap-2 lg:gap-4 h-[40px]'>
-                    <div className=' hidden md:flex items-center gap-0 md:gap-1 lg:gap-2 text-xs text-white '>
+                    <div className=' hidden md:flex items-center gap-0 md:gap-1 lg:gap-2 text-xs text-white cursor-pointer '>
                          <TbPhoneRinging/>
                          +91-123-456-7890
                     </div>
 
-                    <div className=' pt-2 h-full md:hidden items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3'>
+                    <div className=' pt-2 h-full md:hidden items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer'>
                   <GiHamburgerMenu className='text-2xl'/>
                  </div>
 
-                    <div className='hidden  h-full md:flex items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3'>
+                    <div className='hidden  h-full md:flex items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer '>
                         <MdOutlineMessage className='text-2xl '/>
                           <p className='text-xs'>BLOG</p>
                     </div>

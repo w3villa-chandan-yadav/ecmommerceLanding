@@ -65,10 +65,10 @@ const [currentIndex, setCurrentIndex] = useState(0);
     });
   };
 
-  useEffect(() => {
-    const interval = setInterval(goNext, 2000);
-    return () => clearInterval(interval); // Clean up on unmount
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(goNext, 2000);
+  //   return () => clearInterval(interval); // Clean up on unmount
+  // }, []);
 
   return (
     <div className="carousel-container w-full h-full relative ">

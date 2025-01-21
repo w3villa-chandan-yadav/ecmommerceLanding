@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,278 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
+.kanit-thin {
+  font-family: "Kanit", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.kanit-extralight {
+  font-family: "Kanit", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kanit-light {
+  font-family: "Kanit", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-black {
+  font-family: "Kanit", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.kanit-thin-italic {
+  font-family: "Kanit", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.kanit-extralight-italic {
+  font-family: "Kanit", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kanit-light-italic {
+  font-family: "Kanit", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kanit-regular-italic {
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kanit-semibold-italic {
+  font-family: "Kanit", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kanit-bold-italic {
+  font-family: "Kanit", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kanit-extrabold-italic {
+  font-family: "Kanit", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.kanit-black-italic {
+  font-family: "Kanit", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+
+.swiper-pagination {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  @apply w-4 h-4 mx-2 rounded-full transition-all duration-300 ease-in-out;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600; /* Active color */
+}
+
+.swiper-pagination-bullet:hover {
+  @apply bg-blue-400; /* Hover effect */
+}
+/* Inside your global CSS (tailwind.css or index.css) */
+.swiper-pagination {
+  /* Optionally, add custom spacing or position adjustments */
+  padding-top: 10px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  @apply w-4 h-4 mx-2 rounded-full transition-all duration-300 ease-in-out;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600; /* Active color */
+}
+
+.swiper-pagination-bullet:hover {
+  @apply bg-blue-400; /* Hover effect */
+}
+
+
+/* .swiper-pagination-bullet {
+  background-color: black;
+} */
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+width: 30px;
+border-radius: 3px;
+background-color: orange;
+
+}
+
+.swiper_first >.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.swiper_first > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+  
+  border-radius: 50%;
+  background-color: darkorange;
+  
+  }
+
+.swiper{
+  overflow-x: hidden !important;
+}
+
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+ width: 32% !important;
+}
+
+.swiper_first >.swiper-pagination-fraction, .swiper-pagination-custom,.swiper_first > .swiper-horizontal > .swiper-pagination-bullets,.swiper_first > .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  bottom: -2px;
+
+  /* background-color: red; */
+ width: 100% !important;
+}
+
+
+
+.second_swiper >.swiper-pagination-fraction, .swiper-pagination-custom,.second_swiper > .swiper-horizontal > .swiper-pagination-bullets,.second_swiper > .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  bottom: -2px;
+
+  /* background-color: red; */
+ width: 100% !important;
+}
+
+.second_swiper >.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.second_swiper > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+  
+  border-radius: 50%;
+  background-color:blue;
+  
+  }
+
+
+
+
+
+
+  .third_swiper >.swiper-pagination-fraction, .swiper-pagination-custom,.third_swiper > .swiper-horizontal > .swiper-pagination-bullets,.third_swiper > .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    bottom: -5px;
+  
+    /* background-color: red; */
+   width: 100% !important;
+  }
+  
+  .third_swiper >.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.third_swiper > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    
+    border-radius: 50%;
+    background-color:blue;
+    
+    }
+
+    .fourth_swiper >.swiper-pagination-fraction, .swiper-pagination-custom,.fourth_swiper > .swiper-horizontal > .swiper-pagination-bullets,.fourth_swiper > .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: var(--swiper-pagination-bottom, 8px);
+      top: var(--swiper-pagination-top, auto);
+      left: 0;
+      bottom: -3px;
+    
+      /* background-color: red; */
+     width: 100% !important;
+    }
+    
+    .fourth_swiper >.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,.fourth_swiper > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+      width: 20px;
+      height: 10px;
+      
+      border-radius: 12px;
+      background-color:orangered;
+      
+      }
+
+
+
+
+.swiper-pagination{
+  position: relative;
+  /* background-color: green; */
+
+}
+
+/* .swiper-pagination-bullet-active {
+background-color: red;
+
+} */
 
 
 

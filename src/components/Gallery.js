@@ -2,13 +2,13 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-<section className='w-screen h-full bg-gray-600'>
+<section className='w-screen h-full bg-gray-600 overflow-hidden'>
     <div className='w-[85%] mx-auto py-10 '>
 
-        <h3 className='text-center text-3xl font-bold'>Improved Gallery Module </h3>
+        <h3 className='text-center text-2xl kanit-semibold '>Improved Gallery Module </h3>
         <div className='h-[2px] w-[10%] mx-auto bg-orange-500 rounded-lg my-4'/>
 
-        <p className='w-[90%] text-sm text-center text-gray-400 mx-auto'>The Gallery module supports images, videos and can acts as banner that can point to any other page or open other Popup modules.
+        <p className='w-[90%]  text-center text-gray-400 mx-auto kanit-regular'>The Gallery module supports images, videos and can acts as banner that can point to any other page or open other Popup modules.
             Create different modules with images, videos, banners or a combination of all. Add the modules on any page in the grid formate.
         </p>
    
