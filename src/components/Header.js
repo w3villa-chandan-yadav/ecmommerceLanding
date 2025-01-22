@@ -188,16 +188,16 @@ const Header = () => {
 
                 </div>
                 <div className='flex items-center gap-1 md:gap-2 lg:gap-4 h-[40px]'>
-                    <div className=' hidden md:flex items-center gap-0 md:gap-1 lg:gap-2 text-xs text-white cursor-pointer '>
+                    <div className=' hidden md:flex items-center gap-0 md:gap-1 lg:gap-2 text-xs text-white cursor-pointer two'>
                          <TbPhoneRinging/>
                          +91-123-456-7890
                     </div>
 
-                    <div className=' pt-2 h-full md:hidden items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer'>
-                  <GiHamburgerMenu className='text-2xl'/>
+                    <div className=' pt-2 h-full md:hidden items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer '>
+                  <GiHamburgerMenu className='text-2xl '/>
                  </div>
 
-                    <div className='hidden  h-full md:flex items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer '>
+                    <div className='hidden  h-full md:flex items-center bg-yellow-500 text-black px-1 md:px-2 lg:px-4 gap-1 md:gap-2 lg:gap-3 cursor-pointer one '>
                         <MdOutlineMessage className='text-2xl '/>
                           <p className='text-xs'>BLOG</p>
                     </div>

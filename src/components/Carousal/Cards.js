@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useEffect } from 'react';
 
-export default () => {
+export default ({products}) => {
 
   // const dots = document.querySelectorAll(".swiper-pagination-bullet");
 
@@ -101,15 +101,19 @@ export default () => {
     //   onSlideChange={() => console.log('slide change')}
     className='h-full w-full'
     >
-      <SwiperSlide>
+
+      {
+     products.map((ele)=>{
+      return(
+        <SwiperSlide key={ele.id}>
       <div className="carousel-container w-full h-full flex items-center justify-end relative ">
-          <img src={image1} alt='main_ingae' className='w-[60%] h-[60%]  object-cover object-center'/>
+          <img src={ele["image"]} alt='main_ingae' className='w-[60%] h-[60%]  object-contain object-center'/>
                              <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-1 lg:gap-7'>
                               <button className='bg-blue-500 text-white px-3 py-1 rounded-md text-xs'> 
-                                  Products
+                                  {ele["category"]}
                               </button>
                               <h3 className='lg:text-4xl text-sm  w-[170px] lg:w-[310px] font-extrabold font-sans lg:kanit-bold  kanit-normal '>
-                                  Buy the best products from our website
+                              {ele["title"]}
                               </h3>
                               <button className='flex items-center gap-1 border-[1px] border-black rounded-md lg:px-3 px-1  py-[2px] lg:py-1' >
                                   Learn More <IoIosArrowRoundForward className='lg:text-3xl text-xl'/>
@@ -117,7 +121,28 @@ export default () => {
                              </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide>
+
+      )
+     })
+
+      }
+      {/* <SwiperSlide>
+      <div className="carousel-container w-full h-full flex items-center justify-end relative ">
+          <img src={products[0]["image"]} alt='main_ingae' className='w-[60%] h-[60%]  object-cover object-center'/>
+                             <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-1 lg:gap-7'>
+                              <button className='bg-blue-500 text-white px-3 py-1 rounded-md text-xs'> 
+                                  {products[0]["category"]}
+                              </button>
+                              <h3 className='lg:text-4xl text-sm  w-[170px] lg:w-[310px] font-extrabold font-sans lg:kanit-bold  kanit-normal '>
+                              {products[0]["title"]}
+                              </h3>
+                              <button className='flex items-center gap-1 border-[1px] border-black rounded-md lg:px-3 px-1  py-[2px] lg:py-1' >
+                                  Learn More <IoIosArrowRoundForward className='lg:text-3xl text-xl'/>
+                              </button>
+                             </div>
+            </div>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
       <div className="carousel-container w-full h-full flex items-center justify-end relative ">
           <img src={image2} alt='main_ingae' className='w-[70%] h-[70%]  object-contain object-center'/>
                              <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-1 lg:gap-7'>
@@ -132,9 +157,9 @@ export default () => {
                               </button>
                              </div>
             </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
-        <SwiperSlide>
+        {/* <SwiperSlide>
       <div className="carousel-container w-full h-full flex items-center justify-end relative ">
           <img src={image1} alt='main_ingae' className='w-[60%] h-[60%]  object-cover object-center'/>
                              <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-1 lg:gap-7'>
@@ -167,7 +192,7 @@ export default () => {
                               </button>
                              </div>
             </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       
     </Swiper>
   );

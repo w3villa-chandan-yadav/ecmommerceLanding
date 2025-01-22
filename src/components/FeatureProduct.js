@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CiHeart } from "react-icons/ci";
 import { RiExchangeLine } from "react-icons/ri";
 
@@ -6,7 +6,7 @@ import { RiExchangeLine } from "react-icons/ri";
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -14,12 +14,40 @@ import 'swiper/css/pagination';
 
 const FeatureProduct = () => {
 
-    const isShow = true;
+
+      const [second,setSecond] = useState([]);
+    
+    
+    
+        useEffect(()=>{
+      
+            try {
+                // https://fakestoreapi.com/products/category/women's%20clothing?limit=2
+                // fetch('https://fakestoreapi.com/products?limit=5')
+                // .then(res=>res.json())
+                // .then((json)=>{
+                    
+                //     console.log(json)
+                // setproducts(json)
+    
+                fetch(`https://fakestoreapi.com/products/category/women's clothing?limit=5`)
+                .then(res=>res.json())
+                .then((json)=>{
+                    console.log(json)
+                     setSecond(json)
+            }  
+         )
+            } catch (error) {
+                
+                console.log('error in why from us in upper section')
+            }
+    
+        },[])
 
 
 
   return (
-    <section className='w-screen h-full bg-gray-300 pt-7 pb-7 overflow-hidden'>
+    <section className='w-screen h-full bg-gray-300 pt-7 pb-7 lg:pb-[120px] overflow-hidden'>
         <div className='w-[85%] m-auto'>
             <h2 className='text-center font-bold text-2xl kanit-semibold'>Feature Catogory</h2>
             <div className='h-[1px] lg:w-[10%] w-[30%] rounded-md bg-orange-500 mx-auto mt-2 mb-3'/>
@@ -115,18 +143,18 @@ const FeatureProduct = () => {
 
 
                     {
-                        [1,2,3,4].map((_,index)=>{
+                       second.map((ele,index)=>{
                             return(
-                                <SwiperSlide className=''>
+                                <SwiperSlide key={index} className=''>
                   <div className='w-full h-full lg:h-[400px] bg-white px-4 py-5'> 
                 {/* <h3 className='text-sm font-extrabold'>Fashion</h3>
                 <div className='h-[2px] w-[40px] bg-orange-700'/> */}
                 <div className='h-[200px] w-full mx-auto my-4'>
-                    <img src='https://www.luxurylifestylemag.co.uk/wp-content/uploads/2019/07/bigstock-Portrait-Of-Fashion-Young-Woma-295881097.jpg' alt='logo_fashion' className='w-full h-full object-cover object-center'/>
+                    <img src={ele.image} alt='logo_fashion' className='w-full h-full object-contain object-center'/>
                 </div>
                 <div className='border-b-2 border-gray-200'>
-                     <h3 className='text-blue-600  text-sm font-light'> Bodycom Dress</h3>
-                     <h3 className='text-sm font-light'>$19.00</h3>
+                     <h3 className='text-blue-600  text-sm font-light'>{ele.title.substr(0,18)}</h3>
+                     <h3 className='text-sm font-light'>${ele.price}</h3>
 
                 </div>
                 <div className='flex justify-between items-center border-b-2 border-gray-200 py-4 w-full relative'>
@@ -236,12 +264,12 @@ const FeatureProduct = () => {
             </div>
                      </SwiperSlide> */}
 
-
+{/* 
                      <SwiperSlide className=''>
-                  <div className='w-full h-full lg:h-[400px] bg-white px-4 py-5'> 
+                  <div className='w-full h-full lg:h-[400px] bg-white px-4 py-5'>  */}
                 {/* <h3 className='text-sm font-extrabold'>Fashion</h3>
                 <div className='h-[2px] w-[40px] bg-orange-700'/> */}
-                <div className='h-[200px] w-full mx-auto my-4'>
+                {/* <div className='h-[200px] w-full mx-auto my-4'>
                     <img src='https://www.luxurylifestylemag.co.uk/wp-content/uploads/2019/07/bigstock-Portrait-Of-Fashion-Young-Woma-295881097.jpg' alt='logo_fashion' className='w-full h-full object-cover object-center'/>
                 </div>
                 <div className='border-b-2 border-gray-200'>
@@ -258,14 +286,14 @@ const FeatureProduct = () => {
                 </div>
 
             </div>
-                     </SwiperSlide>
+                     </SwiperSlide> */}
 
 
-                     <SwiperSlide className=''>
-                  <div className='w-full h-full lg:h-[400px] bg-white px-4 py-5'> 
+                     {/* <SwiperSlide className=''>
+                  <div className='w-full h-full lg:h-[400px] bg-white px-4 py-5'>  */}
                 {/* <h3 className='text-sm font-extrabold'>Fashion</h3>
                 <div className='h-[2px] w-[40px] bg-orange-700'/> */}
-                <div className='h-[200px] w-full mx-auto my-4'>
+                {/* <div className='h-[200px] w-full mx-auto my-4'>
                     <img src='https://www.luxurylifestylemag.co.uk/wp-content/uploads/2019/07/bigstock-Portrait-Of-Fashion-Young-Woma-295881097.jpg' alt='logo_fashion' className='w-full h-full object-cover object-center'/>
                 </div>
                 <div className='border-b-2 border-gray-200'>
@@ -282,7 +310,7 @@ const FeatureProduct = () => {
                 </div>
 
             </div>
-                     </SwiperSlide>
+                     </SwiperSlide> */}
 
 {/* 
                      <SwiperSlide className=''>

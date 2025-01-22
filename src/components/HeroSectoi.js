@@ -1,36 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Carousel from './Carousal';
 import image1 from '../Assets/image1.png'
 import TestiMonials from './Carousal/Cards';
 
-const items=[
-    {
-       image: 'image1',
-        heading:"Enjoy the products from the store",
-    },
-    {
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvifIb3pfrAm8iZ3ft7MVIphoUmzX6DtX2Pg&s",
-         heading:"Best Mobile options at any resolution",
-     },
 
-    {
-        image:"https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-various-makeup-products-lie-on-a-table-on-dark-image_2908578.jpg",
-        heading:"Buy the best makeup products",
-    },
-    {
-        image:"https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
-        heading:"Try best clothing options in the market"
-    },
-    {
-        image:"https://www.canfieldsci.com/common/images/products/23/title/product-title.jpg",
-        heading:"Best camera option at minimum price"
-    }
-]
 
 
 
 const HeroSectoi = () => {
+
+    const [products,setproducts] = useState([])
+
+    useEffect(()=>{
+        
+        console.log("here i am")
+
+        try {
+            
+            fetch('https://fakestoreapi.com/products?limit=5')
+            .then(res=>res.json())
+            .then((json)=>{
+                
+                console.log(json)
+            setproducts(json)
+        }
+        )
+        
+
+        } catch (error) {
+            console.log("error in the Hereosections")
+        }
+
+    },[])
+
+    if(products.length ===0){
+        return(
+            <div>
+                Loading
+            </div>
+        )
+    }
+
+
   return (
 
     <section className='w-screen h-full py-5 overflow-hidden'>
@@ -51,7 +63,7 @@ const HeroSectoi = () => {
 
 
             {/* <Carousel items={items}/> */}
-            <TestiMonials/>
+            <TestiMonials products={products}/>
 
 
             </div>
