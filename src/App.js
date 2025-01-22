@@ -202,10 +202,6 @@ function App() {
 
 <Footer/>
 
-
-
-
-
     </>
   );
 }

@@ -160,7 +160,7 @@ const Header = () => {
             </div>  
           </div>
 
-          <div className='w-screen bg-blue-800 overflow-hidden'>
+          <div className='w-screen bg-blue-800 '>
             <div className="w-[85%] mx-auto flex justify-between items-center ">
                 <div className='flex items-center gap-2 h-[40px]'>
                     <div className='h-full bg-yellow-500 text-black relative flex items-center px-2 lg:px-4 text-sm text-nowrap cursor-pointer  '>

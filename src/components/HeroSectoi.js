@@ -34,7 +34,7 @@ const HeroSectoi = () => {
   return (
 
     <section className='w-screen h-full py-5 overflow-hidden'>
-        <div className='w-[90%] mx-auto flex justify-center items-center gap-1 md:gap-5 lg:h-[400px] md:h-[330px] h-[260px] flex-col md:flex-row '>
+        <div className='w-[90%] mx-auto flex justify-center items-center gap-1 md:gap-5 lg:h-[400px] md:h-[330px] h-[360px] flex-col md:flex-row '>
             <div className='flex-1 rounded-md overflow-hidden relative h-[200px] bg-gray-300 md:h-full w-full'>
                {/* <img src='https://budli.in/blog/wp-content/uploads/2021/07/6-What-You-Should-Do-Before-You-Sell-Your-Used-Laptop.jpg' alt='main_ingae' className='w-full h-full object-cover object-center'/>
                <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-7'>
@@ -56,7 +56,7 @@ const HeroSectoi = () => {
 
             </div>
 
-            <div className='flex justify-between items-center lg:gap-2   md:gap-3 gap-1 flex-row md:flex-col flex-1 h-full md:flex-[0.4]'>
+            <div className='flex justify-between items-center lg:gap-2   md:gap-3 gap-1 flex-row md:flex-col flex-[0.5] h-full md:flex-[0.4]'>
                 <div className=' w-full h-full md:h-[48%] overflow-hidden relative rounded-md bg-gray-300'>
                 <img src='https://www.shutterstock.com/image-photo/beautiful-luxury-mens-watch-stylish-260nw-2511178433.jpg' alt='main_ingae' className='w-full h-full object-cover object-right scale-150 '/>
                <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-3'>

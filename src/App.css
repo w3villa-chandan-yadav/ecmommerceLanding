@@ -169,9 +169,9 @@
 
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-width: 30px;
+width: 10%;
 border-radius: 3px;
-background-color: orange;
+background-color: rgb(29, 106, 137);
 
 }
 
