@@ -77,7 +77,7 @@ const WhyFromUs = ({catogories,isTrue}) => {
     
   return (
 
-    <section className={`w-screen py-8 overflow-hidden ${catogories.bg  ?"bg-gray-200" : "mb-10"}  `}>
+    <section className={`w-screen py-8 overflow-hidden ${catogories.bg  ?"bg-gray-200" : "bg-gray-100 pb-10"}  `}>
         <div className= 'md:w-[89%] w-[95%] lg:w-[80%] mx-auto '>
             <h2 className='  font-medium   text-center text-2xl kanit-semibold '>{catogories.heading}</h2>
             <div className='h-[1px] w-[40%] md:w-[10%] bg-orange-500 rounded-lg mx-auto mt-2 mb-3'/>
@@ -554,7 +554,7 @@ const WhyFromUs = ({catogories,isTrue}) => {
         second.map((ele,index)=>{
             return(
                 <SwiperSlide key={index} >
-                <div className='w-full h-[90%] rounded-lg overflow-hidden relative'>
+                <div className='w-full h-[90%] rounded-lg overflow-hidden relative bg-white'>
                               <img src={ele.image} alt='' className='w-full h-full object-contain object-center'/>
                               <h3 className='bg-black text-white rounded-sm font-bold  absolute bottom-3 px-3  left-[50%] translate-x-[-50%] text-center  kanit-thin  cursor-pointer'>{ele.title.substr(0,11)}</h3>
                           </div>

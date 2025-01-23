@@ -12,6 +12,8 @@ const HeroSectoi = () => {
 
     const [products,setproducts] = useState([])
 
+    const isprety =false;
+
     useEffect(()=>{
         
         console.log("here i am")
@@ -47,7 +49,7 @@ const HeroSectoi = () => {
 
     <section className='w-screen h-full py-5 overflow-hidden'>
         <div className='w-[90%] mx-auto flex justify-center items-center gap-1 md:gap-5 lg:h-[400px] md:h-[330px] h-[360px] flex-col md:flex-row '>
-            <div className='flex-1 rounded-md overflow-hidden relative h-[200px] bg-gray-300 md:h-full w-full'>
+            <div className={`flex-1 rounded-md overflow-hidden relative h-[200px] md:h-full w-full ${isprety ? "bg-gray-300":"border-[1px] border-black"}`}>
                {/* <img src='https://budli.in/blog/wp-content/uploads/2021/07/6-What-You-Should-Do-Before-You-Sell-Your-Used-Laptop.jpg' alt='main_ingae' className='w-full h-full object-cover object-center'/>
                <div className=' absolute left-[5%] top-[50%] translate-y-[-50%]  flex flex-col justify-between items-start gap-7'>
                 <button className='bg-blue-500 text-white px-3 py-1 rounded-md text-xs'> 

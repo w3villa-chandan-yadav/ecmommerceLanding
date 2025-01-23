@@ -13,7 +13,6 @@ import { FaSearch } from "react-icons/fa";
 import { HiUserCircle } from "react-icons/hi2";
 import { PiNotePencilFill } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
-import { MdOutlineChangeCircle } from "react-icons/md";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { IoReorderFourOutline } from "react-icons/io5";
 import { TbPhoneRinging } from "react-icons/tb";
@@ -100,7 +99,7 @@ const Header = () => {
 
 
         <div className='flex justify-between items-center  w-screen bg-gray-200 mx-auto text-sm py-5 '>
-        <div className='flex justify-between items-center  w-[85%] mx-auto  gap-10'>
+        <div className='flex justify-between items-center  w-[85%] mx-auto  gap-10 '>
                <div className="w-[20%] md:w-[13%] lg:w-[15%] flex items-center  h-[27px] md:h-[34px] lg:h-[40px]">
                   <img src={image} alt='main_image' className='w-full h-full'/>
                </div>
@@ -161,7 +160,7 @@ const Header = () => {
           </div>
 
           <div className='w-screen bg-blue-800 '>
-            <div className="w-[85%] mx-auto flex justify-between items-center ">
+            <div className="w-[85%] mx-auto flex justify-between items-center  ">
                 <div className='flex items-center gap-2 h-[40px]'>
                     <div className='h-full bg-yellow-500 text-black relative flex items-center px-2 lg:px-4 text-sm text-nowrap cursor-pointer  '>
                       <IoReorderFourOutline className='hidden md:visible text-2xl lg:text-3xl font-bolder'/>
