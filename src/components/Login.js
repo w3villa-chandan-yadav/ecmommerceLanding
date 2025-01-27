@@ -4,6 +4,8 @@ import lock from "../Assets/456283.png"
 import user from "../Assets/2889676.png";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import image1 from "../Assets/image2.png"
+import image2 from "../Assets/image3.png"
 
 
 const Login = () => {
@@ -67,9 +69,27 @@ const Login = () => {
 
     
   return (
-    <div className='absolute  bg-black w-screen h-screen z-50 '>
+    <div className='relative  bg-black w-screen h-screen z-50 overflow-hidden '>
     <div className="containerr">
+
+        
+   
+
+    <div className='Image_containerr'>
+            <img className='w-full h-full' src={image1}/>
+        </div>
+
+
+        <div className='Image_containerr1'>
+            <img className='w-full h-full' src={image2}/>
+        </div>
+
+
+
          <div className="inner_container">
+
+
+
              <div className="inner_first">
                  <div className="items-container">
                      <h2>Login</h2>
