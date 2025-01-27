@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { GrHome } from "react-icons/gr";
 import { MdOutlineStars } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
@@ -17,6 +17,7 @@ import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { IoReorderFourOutline } from "react-icons/io5";
 import { TbPhoneRinging } from "react-icons/tb";
 import { MdOutlineMessage } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
@@ -35,6 +36,15 @@ import { MdOutlineMessage } from "react-icons/md";
 
 
 const Header = () => {
+
+ const [isLogin,setIsLogin] = useState(null)
+
+    useEffect(()=>{
+        const isLoginnn = sessionStorage.getItem("isLogin") ? JSON.parse(sessionStorage.getItem("isLogin")) : null ;
+        console.log("this is the islogin" + isLoginnn)
+        setIsLogin(isLoginnn);
+    },[])
+
   return (
     <section className='w-screen h-full overflow-hidden '>
         <div className='flex justify-between items-center  w-[85%] mx-auto text-sm'>
@@ -149,8 +159,17 @@ const Header = () => {
                 <FaSearch className='text-3xl text-gray-800'/>
 
                </div>
+
+               {
+                isLogin ? <>
                 <p className='text-[10px] md:text-sm'>0 item(s)-$0.00</p>
                 <PiShoppingCartSimpleFill className='rounded-sm ml-1 text-xl md:text-3xl bg-blue-600 text-white'/>
+                
+                </> :<Link to={"/login"}> <button className='px-2 py-1 md:px-3 md:py-2 lg:px-4 bg-blue-600 rounded-md text-white kanit-regular '>
+                    Login
+                </button>
+                </Link>
+               }
 
                </div>
                
